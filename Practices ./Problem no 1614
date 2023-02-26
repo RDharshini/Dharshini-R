@@ -18,3 +18,22 @@ class Solution {
         return max;
     }
 }
+class Solution {
+    public int maxDepth(String s) {
+        int n=s.length();
+        int max=0;
+        Stack sta=new Stack();
+        for(int i=0;i<n;i++){
+            if(s.charAt(i)=='('){
+                sta.push(s.charAt(i));
+            if(sta.size() >max){
+                max=sta.size();
+            }
+            }
+            if(s.charAt(i)==')'){
+                sta.pop();
+            }
+        }
+        return max;
+    }
+}
