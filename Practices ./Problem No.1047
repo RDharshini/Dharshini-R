@@ -1,0 +1,21 @@
+class Solution {
+    public String removeDuplicates(String s) {
+       Stack sta=new Stack();
+        int n=s.length();
+        sta.push(s.charAt(0));
+        for(int i=1;i<n;i++){
+            char ch=s.charAt(i);
+            if(!sta.isEmpty() && sta.peek().equals(ch)){
+                sta.pop();
+            }
+               else{
+                   sta.push(ch);
+               }
+        }
+               String str="";
+        while(!sta.isEmpty()){
+            str=sta.pop() + str;
+        }
+        return str;
+}
+}
