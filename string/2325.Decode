@@ -1,0 +1,22 @@
+class Solution {
+    public String decodeMessage(String key, String message) {
+        HashMap <Character,Character> hash=new HashMap<>();
+        char orgin='a';
+        StringBuilder str=new StringBuilder();
+        key=key.replace(" ","");
+        for(int i=0;i<key.length();i++){
+            if(!hash.containsKey(key.charAt(i))){
+                hash.put(key.charAt(i) ,orgin++);
+            }
+        }
+        for(int i=0;i<message.length();i++){
+            if(hash.containsKey(message.charAt(i))){
+                str.append(hash.get(message.charAt(i)));
+            }
+            else{
+                str.append(message.charAt(i));
+            }
+        }
+        return str.toString();
+    }
+}
