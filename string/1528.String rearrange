@@ -1,0 +1,15 @@
+class Solution {
+    public String restoreString(String s, int[] indices) {
+        int n=s.length();
+        int m=indices.length;
+        char[] str=new char[m];
+        for(int i=0;i<n;i++){
+            str[indices[i]]=s.charAt(i);
+        }
+        StringBuilder strings=new StringBuilder();
+        for(int i=0;i<n;i++){
+            strings.append(str[i]);
+        }
+        return strings.toString();
+    }
+}
