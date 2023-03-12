@@ -1,0 +1,12 @@
+class Solution {
+    public String interpret(String command) {
+        int n=command.length();
+        if(command.contains("(al)")){
+            command=command.replace("(al)","al");
+        }
+        if(command.contains("()")){
+            command=command.replace("()","o");
+        }
+        return command;
+    }
+}
