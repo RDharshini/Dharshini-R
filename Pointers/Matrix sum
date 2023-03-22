@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int row,col,**mat;
+    scanf("%d %d",&row,&col);
+    mat=(int **)malloc(row*sizeof(int*));
+    for(int i=0;i<row;i++){
+        mat[i]=(int *)malloc(col*sizeof(int*));
+    }
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            scanf("%d",&mat[i][j]);
+        }
+    }
+    int sum=0;
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            sum=sum+mat[i][j];
+        }
+    }
+    printf("%d",sum);
+}
