@@ -1,0 +1,17 @@
+#include <stdio.h>
+int multiplication(int n){
+    int res=1;
+    if(n==1){
+        return 1;
+    }
+    else{
+        res=n*multiplication(n-1);
+    }
+}
+int main()
+{
+   int n;
+   scanf("%d",&n);
+  printf("%d",multiplication(n));
+    return 0;
+}
