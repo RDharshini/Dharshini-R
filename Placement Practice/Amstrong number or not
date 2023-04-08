@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int temp1=num;
+    int temp2=num;
+    int count=0;
+    int result=0;
+    while(temp1>0){
+        count++;
+        temp1=temp1/10;
+    }
+    while(temp2>0){
+        int rem=temp2%10;
+        result=result+pow(rem,count);
+        temp2=temp2/10;
+    }
+    if(num==result){
+        printf("Amstrong number");
+    }
+    else{
+        printf("Not an amstrong number");
+    }
+    return 0;
+}
