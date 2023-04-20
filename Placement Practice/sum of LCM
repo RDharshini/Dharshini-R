@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+int num;
+scanf("%d",&num);
+int i=1;
+int sum=0;
+while(i<=num){
+for(int k=num;k<=i*num;k++){
+    if(k%i==0 && k%num==0){
+        sum=sum+k;
+        printf("%d ",k);
+        break;
+    }
+}
+i++;
+}
+printf("%d",sum);
+}
