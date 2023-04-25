@@ -1,0 +1,40 @@
+public class Main
+{
+    String name;
+    int age;
+    String address;
+    public Main(String name,int age,String address){
+        this.name=name;
+        this.age=age;
+        this.address=address;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setAge(int age){
+        this.age=age;
+    }
+    public void setAddress(String Address){
+        this.address=address;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String getAddress(){
+        return address;
+    }
+    public String toString(){
+        return ("The student name is "+this.getName()+"\n"+"The age of the student is "+this.getAge()+"\n"+"The address of the student is "+this.getAddress());
+    }
+	public static void main(String[] args) {
+		Main John=new Main("John Martin",21,"Columbia");
+		Main Sofia=new Main("Sofia Mathive",22,"Peru");
+		System.out.println(John.getName());
+		System.out.println(Sofia.getName());
+		System.out.println(John.toString());
+		System.out.println(Sofia.toString());
+	}
+}
