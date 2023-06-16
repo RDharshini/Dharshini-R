@@ -1,0 +1,21 @@
+class cylinder{
+    int length;
+    int breath;
+    int radius;
+    int area(){
+        return length*breath*radius;
+    }
+    int surface(){
+        return length*breath;
+    }
+}
+class HelloWorld {
+    public static void main(String[] args) {
+    cylinder cy=new cylinder();
+    cy.length=4;
+    cy.breath=5;
+    cy.radius=20;
+    System.out.println(cy.area());
+    System.out.println(cy.surface());
+    }
+}
