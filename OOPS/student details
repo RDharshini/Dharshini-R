@@ -1,0 +1,25 @@
+class student{
+   public int rollnumber;
+  public String name;
+    public int mark;
+   public void Rollnumber(){
+        System.out.println("The rollnumber of the student is "+rollnumber);
+    }  
+    public void Name(){
+        System.out.println("The name of the student is "+name);
+    }
+    public void marks(){
+        System.out.println("The mark of the student is "+mark);
+    }
+}
+class HelloWorld {
+    public static void main(String[] args) {
+        student s1=new student();
+        s1.rollnumber=10;
+        s1.name="Asmitha";
+        s1.mark=99;
+        s1.Rollnumber();
+        s1.Name();
+        s1.mark();
+    }
+}
