@@ -1,0 +1,26 @@
+import java.util.*;
+class HelloWorld {
+    static void change(int[] arr,int in,int val){
+        arr[in]=val;
+    }
+    static void change2(int a,int val){
+        a=val;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int in=sc.nextInt();
+        int val=sc.nextInt();
+        change(arr,in,val);
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" "); //Array values can be changed using the method because they are stored as object with reference, they arepassed as reference
+        }
+        int a=sc.nextInt();
+        change2(a,val);
+        System.out.println(a);// Integer values cannot be changed even though we use method.Likewise the string cannot be changed because String is immutable
+    }
+}
