@@ -8,19 +8,26 @@ class HelloWorld {
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the length of the array : ");
         int n=sc.nextInt();
+        System.out.print("\nEnter the values of the array : ");
         int[] arr=new int[n];
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
+        System.out.print("\nEnter the index to be changed : ");
         int in=sc.nextInt();
+        System.out.print("\nEnter the value should be replaced : ");
         int val=sc.nextInt();
         change(arr,in,val);
+        System.out.print("\nAfter changing the value the array is : ");
         for(int i=0;i<n;i++){
-            System.out.print(arr[i]+" "); //Array values can be changed using the method because they are stored as object with reference, they arepassed as reference
+            System.out.print(arr[i]+" ");
         }
+        System.out.print("\nEnter the integer that has to be changed : ");
         int a=sc.nextInt();
         change2(a,val);
-        System.out.println(a);// Integer values cannot be changed even though we use method.Likewise the string cannot be changed because String is immutable
+        System.out.print("\nAfter changing the Integer : ");
+        System.out.print(a);
     }
 }
